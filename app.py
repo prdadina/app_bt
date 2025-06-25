@@ -7,7 +7,10 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-
+@app.route('/')
+def home():
+    return "App 2 (helper API) is running."
+    
 class BankingAssistant:
     def __init__(self):
         self.banking_keywords = [
